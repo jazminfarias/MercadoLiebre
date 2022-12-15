@@ -226,6 +226,7 @@ p {
     padding: 25px;
     display: flex;
     flex-direction: column;
+    position: relative;
 }
 
 .precio-desc {
@@ -355,7 +356,7 @@ main article i {
     border: 1px solid #39b54a;
     background-color: #FFF;
     border-radius: 50%;
-    position: absolute;
+    position:absolute;
     right: 20px;
     top: -20px;
 }
@@ -456,6 +457,7 @@ main article i {
         flex-wrap: wrap;
     }
 
+    
     main article i{
         transition: all 1s;
     }
