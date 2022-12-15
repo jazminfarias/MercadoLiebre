@@ -71,27 +71,25 @@
             <label>Domicilio</label>
             <input type="text" name="domicilio" placeholder="Calle 123" required minlength="5" maxlength="30" pattern="[A-Za-z0-9]+" title="Letras y números. Tamaño mínimo: 5. Tamaño máximo: 30">
         </div>
-        <div>
-            <label>Perfil de usuario</label>
-        </div>
         <div class="radio-perfilUsuario">
+            <label>Perfil de usuario</label>
+            <div class="comprador-vendedor">
             <input type="radio" name="perfilUsuario" value="Comprador"><div class="radio-text">Comprador</div></input>
             <input type="radio" name="perfilUsuario" value="Vendedor"><div class="radio-text">Vendedor</div></input>
         </div>
-        <div>
-            <label>Intereses</label>
         </div>
         <div class="checkbox-intereses">
+            <label>Intereses</label>
+            <div class="opciones-intereses">
             <input type="checkbox" name="intereses" value="Electro"><div class="checkbox-text">Electro</div></input>
             <input type="checkbox" name="intereses" value="Moda"><div class="checkbox-text">Moda</div></input>
             <input type="checkbox" name="intereses" value="Hogar"><div class="checkbox-text">Hogar</div></input>
             <input type="checkbox" name="intereses" value="Juguetería"><div class="checkbox-text">Juguetería</div></input>
             <input type="checkbox" name="intereses" value="Vida sana"><div class="checkbox-text">Vida Sana</div></input>
         </div>
-        <div>
-            <label>Foto de perfil</label>
         </div>
-        <div>
+        <div class="div-fotoperfil">
+            <label>Foto de perfil</label>
             <input type="file" name="fotoPerfil" accept=".jpg">
         </div>
         <div class="form2">

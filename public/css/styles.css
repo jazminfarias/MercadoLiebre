@@ -4,6 +4,10 @@
     box-sizing: border-box;
     position: relative;
 }
+html{
+    position: relative;
+    min-height: 100%;
+}
 
 :root {
     --yellow: #EAC926;
@@ -25,6 +29,9 @@ body {
     margin: 25px;
     color: var(--gray);
     font-weight: bolder;
+    display: flex;
+    flex-direction: column;
+    justify-content: left;
 }
 
 form .titulares{
@@ -41,10 +48,6 @@ form input{
     margin: 10px;
     outline: none;
 }
-.form1 input, .form2 input {
-    width: 90%;
-}
-
 form label{
     font-size: 14px;
     font-weight: bold;
@@ -53,19 +56,56 @@ form label{
     flex-direction:column;
     justify-content: space-around;
 }
+.form1 input, .form2 input {
+    width: 90%;
+}
+.form3 input{
+    width: 40%;
+}
+.form3, .form1, .form2{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
 
 div.radio-perfilUsuario{
     font-size: 12px;
     display: flex;
-    flex-direction:row;
+    flex-direction:column;
     margin: 10px;
+    justify-content: center;
+    align-items: center;
+}
+.comprador-vendedor{
+    display: flex;
+    flex-direction:row;
+    justify-content: center;
+    align-items: center;
 }
 
 div.checkbox-intereses{
     font-size: 12px;
     display: flex;
-    flex-direction:row;
+    flex-direction:column;
     flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+}
+
+.opciones-intereses{
+    display: flex;
+    flex-direction:row;
+    justify-content: center;
+    align-items: center;
+
+}
+.div-fotoperfil{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 }
 
 div.checkbox-text,
@@ -102,6 +142,7 @@ div.radio-text {
     flex-wrap: nowrap;
     padding: 20px;
     justify-content: space-around;
+    width: 100%;
 
 }
 
@@ -119,7 +160,7 @@ div.radio-text {
     flex-direction: row;
     height: 36px;
     border-radius: 7px;
-    width: 100%;
+    width:max-content;
 }
 
 header div.form{
@@ -156,6 +197,7 @@ header div.form{
 
 p {
     font-size: 12px;
+    font-weight: bold;
 }
 
 .precio {
@@ -218,11 +260,10 @@ footer {
     text-align: center;
     line-height: 30px;
     margin-top: 20px;
-    margin-bottom: 20px;
     padding-top: 15px;
     padding-bottom: 15px;
-
 }
+
 
 .burger-menu {
     text-align: center;
@@ -275,7 +316,7 @@ li {
     margin-top: 8px;
 }
 
-#caja-main {
+.caja-main {
     width: 90%;
     margin: 0 auto;
     display: flex;
@@ -299,7 +340,27 @@ main {
     flex-direction: column;
 }
 
+.caja-main{
+    display: flex;
+    flex-direction: column;
+
+}
+
 main article i {
+    display: block;
+    font-size: 16px;
+    padding: 5px;
+    width: 30px;
+    height: 30px;
+    border: 1px solid #39b54a;
+    background-color: #FFF;
+    border-radius: 50%;
+    position: absolute;
+    right: 20px;
+    top: -20px;
+}
+
+.caja-main article i {
     display: block;
     font-size: 16px;
     padding: 5px;
@@ -358,18 +419,30 @@ main article i {
         visibility: visible;
         display: flex;
         flex-direction: row;
-        justify-content: space-around;
+        justify-content: space-between;
         font-size: small;
+        margin-right: 20px;
+        margin-left: 20px;
     }
 
     .section-right-header {
         display: flex;
         list-style-type: none;
+        margin-right: 50px;
+    }
+
+    .section-right-header li a{
+        margin-right: 10px;
+    }
+
+    .section-left-header li a{
+        margin-left: 10px;
     }
 
     .section-left-header {
         display: flex;
         list-style-type: none;
+        margin-left: 50px;
     }
 
     .burger-menu {
@@ -385,14 +458,16 @@ main article i {
 
     main article i{
         transition: all 1s;
-
+    }
+    .caja-main article i {
+        transition: all 1s;
     }
     
     .producto:hover i{
         transform: rotate(-90deg);;
     }
 
-    #caja-main {
+    .caja-main {
         display: flex;
         flex-direction: row;
         flex-wrap: wrap;
@@ -400,16 +475,37 @@ main article i {
         justify-content: space-around;
     }
 
+    div .caja-main{
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        margin: 0 auto;
+        justify-content: space-around;
+
+    }
+
     .header-tablet-desktop {
         display: flex;
         flex-direction: row;
         flex-wrap: nowrap;
-        padding: 20px;
+        padding: 10px;
+        
+    }
+
+    .div-compracuotas{
+        align-self: center;
+    }
+
+    .div-form-header{
+        align-self: center;
         justify-content: center;
     }
 
     .logo {
         margin-right: 20px;
+    }
+    .form1 input, .form2 input {
+        width: 40%;
     }
 
 }
@@ -438,7 +534,7 @@ main article i {
         display: flex;
         flex-direction: row;
     }
-    #caja-main {
+    .caja-main {
         display: flex;
         flex-direction: row;
         margin: 0 auto;
