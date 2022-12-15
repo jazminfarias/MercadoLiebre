@@ -5,7 +5,7 @@ const path = require ('path');
 const port= process.env.PORT || 3000;
 app.listen(port,()=>console.log('Servidor corriendo en el puerto ' + port));
 
-app.get('/home', (req, res) => {
+app.get('/', (req, res) => {
     res.sendFile(path.join(__dirname, '/views/home.html'));});
 
 app.get('/register', (req, res) => {
